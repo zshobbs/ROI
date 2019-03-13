@@ -23,6 +23,7 @@ function setup() {
   button.position(intrest_rate.x + intrest_rate.width, 120);
   button.mousePressed(greet);
 
+  // HTML needs it as one loooong line
   output = createElement('p', '<b>ROI 0% <br/> Deposit £0 <br/> Mortgage Cost £0 <br/> Purchassing Fees <br/> Management Fees £0 <br/> Rainy Day Fund £0 <br/> Total Money In £0 <br/> Cost per Mouth £0 <br/> Cash Flow Mouth £0');
   output.position(20,130);
 
