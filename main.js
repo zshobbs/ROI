@@ -50,17 +50,16 @@ function greet() {
   let income = rent_mouth * 12;
   let ex = (rainy_day + management) * 12 + mortgage_payment_year;
   let roi = (income - ex)/money_in;
-  roi = parseFloat(roi).toFixed(4);
 
 
 
-  output.html('<b>ROI '+roi*100+
-  '% <br/> Deposit £'+deposit+
-  '<br/> Mortgage Cost £'+mortgage_payment_year/12+
-  '<br/> Purchassing Fees £'+buy_fees+
-  '<br/> Management Fees £'+management+
-  '<br/> Rainy Day Fund £'+rainy_day+
-  '<br/> Total Money In £'+money_in+
-  '<br/> Cost per Mouth £'+ex/12+'');
+  output.html('<b>ROI '+parseFloat(roi*100).toFixed(2)+
+  '% <br/> Deposit £'+= parseFloat(deposit).toFixed(2)+
+  '<br/> Mortgage Cost £'+parseFloat(mortgage_payment_year/12).toFixed(2)+
+  '<br/> Purchassing Fees £'+parseFloat(buy_fees).toFixed(2)+
+  '<br/> Management Fees £'+parseFloat(management).toFixed(2)+
+  '<br/> Rainy Day Fund £'+parseFloat(rainy_day).toFixed(2)+
+  '<br/> Total Money In £'+parseFloat(money_in).toFixed(2)+
+  '<br/> Cost per Mouth £'+parseFloat(ex/12).toFixed(2));
 
 }
