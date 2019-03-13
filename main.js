@@ -6,12 +6,12 @@ function setup() {
 
   t_house_price = createElement('p', 'House Price');
   t_house_price.position(20, 5);
-  house_price = createInput();
+  house_price = createInput('50,000');
   house_price.position(20, 40);
 
   t_rent = createElement('p', 'Rent');
   t_rent.position(20, 45);
-  rent = createInput();
+  rent = createInput('550');
   rent.position(20, 80);
 
   t_intrest_rate = createElement('p', 'Intrest Rate');
@@ -32,7 +32,7 @@ function setup() {
 }
 
 function cal_roi() {
-  const price = parseFloat(house_price.value());
+  const price = parseFloat(house_price.value().replace(/,/g, ''));
   const intrest = parseFloat(intrest_rate.value());
   const rent_mouth = parseFloat(rent.value());
   let year_rent = rent * 12;
