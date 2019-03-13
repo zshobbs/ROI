@@ -6,12 +6,12 @@ function setup() {
 
   t_house_price = createElement('p', 'House Price');
   t_house_price.position(20, 5);
-  house_price = createInput('50,000');
+  house_price = createInput();
   house_price.position(20, 40);
 
   t_rent = createElement('p', 'Rent');
   t_rent.position(20, 45);
-  rent = createInput('550');
+  rent = createInput();
   rent.position(20, 80);
 
   t_intrest_rate = createElement('p', 'Intrest Rate');
