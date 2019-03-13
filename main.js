@@ -60,6 +60,7 @@ function greet() {
   '<br/> Management Fees £'+parseFloat(management).toFixed(2)+
   '<br/> Rainy Day Fund £'+parseFloat(rainy_day).toFixed(2)+
   '<br/> Total Money In £'+parseFloat(money_in).toFixed(2)+
-  '<br/> Cost per Mouth £'+parseFloat(ex/12).toFixed(2));
+  '<br/> Cost per Mouth £'+parseFloat(ex/12).toFixed(2)
+  '<br/> Mouth Cash Flow £'+parseFloat((income-ex)/12).toFixed(2));
 
 }
