@@ -54,7 +54,7 @@ function greet() {
 
 
   output.html('<b>ROI '+parseFloat(roi*100).toFixed(2)+
-  '% <br/> Deposit £'+= parseFloat(deposit).toFixed(2)+
+  '% <br/> Deposit £'+parseFloat(deposit).toFixed(2)+
   '<br/> Mortgage Cost £'+parseFloat(mortgage_payment_year/12).toFixed(2)+
   '<br/> Purchassing Fees £'+parseFloat(buy_fees).toFixed(2)+
   '<br/> Management Fees £'+parseFloat(management).toFixed(2)+
