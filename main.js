@@ -23,7 +23,7 @@ function setup() {
   button.position(intrest_rate.x + intrest_rate.width, 120);
   button.mousePressed(greet);
 
-  output = createElement('p', '<b>ROI 0% <br/> Deposit £0 <br/> Mortgage Cost £0 <br/> Purchassing Fees <br/> Management Fees £0 <br/> Rainy Day Fund £0 <br/> Total Money In £0 <br/> Cost per Mouth £0');
+  output = createElement('p', '<b>ROI 0% <br/> Deposit £0 <br/> Mortgage Cost £0 <br/> Purchassing Fees <br/> Management Fees £0 <br/> Rainy Day Fund £0 <br/> Total Money In £0 <br/> Cost per Mouth £0 <br/> Cash Flow Mouth £0');
   output.position(20,130);
 
   textAlign(CENTER);
@@ -60,6 +60,7 @@ function greet() {
   '<br/> Management Fees £'+parseFloat(management).toFixed(2)+
   '<br/> Rainy Day Fund £'+parseFloat(rainy_day).toFixed(2)+
   '<br/> Total Money In £'+parseFloat(money_in).toFixed(2)+
-  '<br/> Cost per Mouth £'+parseFloat(ex/12).toFixed(2));
+  '<br/> Cost per Mouth £'+parseFloat(ex/12).toFixed(2)+
+  '<br/> Cash Flow Mouth £'+parseFloat((income-ex)/12).toFixed(2));
 
 }
