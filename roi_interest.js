@@ -1,4 +1,4 @@
-let button, house_price, rent, intrest_rate, output;
+let button, house_price, rent, intrest_rate, output, extra;
 
 function setup() {
   // create canvas
@@ -19,13 +19,18 @@ function setup() {
   intrest_rate = createInput('3');
   intrest_rate.position(20, 120);
 
+  t_extra = createElement('p', 'Extra Costs');
+  t_extra.position(20,125);
+  extra = createInput('0');
+  extra.position(20, 160);
+
   button = createButton('submit');
-  button.position(intrest_rate.x + intrest_rate.width, 120);
+  button.position(extra.x + extra.width, 160);
   button.mousePressed(cal_roi);
 
   // HlML so need to be one loooooong line
   output = createElement('p', '<b>ROI 0% <br/> Deposit £0 <br/> Mortgage Cost £0 <br/> Purchassing Fees <br/> Management Fees £0 <br/> Rainy Day Fund £0 <br/> Total Money In £0 <br/> Cost per Mouth £0 <br/> Cash Flow Mouth £0');
-  output.position(20,130);
+  output.position(20,170);
 
   textAlign(CENTER);
   textSize(50);
@@ -35,6 +40,7 @@ function cal_roi() {
   const price = parseFloat(house_price.value().replace(/,/g, ''));
   const intrest = parseFloat(intrest_rate.value());
   const rent_mouth = parseFloat(rent.value());
+  const addon_costs = parseFloat(extra.value());
   let year_rent = rent * 12;
 
   // calculate Money in
@@ -47,7 +53,7 @@ function cal_roi() {
   let mortgage_payment_year = price * (intrest/100);
 
   // calculate ROI
-  let money_in = deposit + buy_fees;
+  let money_in = deposit + buy_fees + addon_costs;
   let income = rent_mouth * 12;
   let ex = (rainy_day + management) * 12 + mortgage_payment_year;
   let roi = (income - ex)/money_in;
