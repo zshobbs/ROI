@@ -50,7 +50,7 @@ function cal_roi() {
   let year_rent = rent * 12;
 
   // calculate Money in
-  let deposit = price * 0.0.5;
+  let deposit = price * 0.05;
   let buy_fees = price * 0.04;
 
   // running costs
